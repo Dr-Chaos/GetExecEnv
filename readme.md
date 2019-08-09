@@ -5,16 +5,20 @@ A module to get simply Nodejs or Electron execution environment (development, pr
 # Installation
 
 ```
-npm i "@lovely.sh/get-exec-env"
+yarn add "@lovely.sh/get-exec-env"
 ```
 
 # Example of usage
 
 ```
-const { isDev, isElectronPackaged } = require('@lovely.sh/get-exec-env');
+const { isNodeDev, isElectronDev, isElectronPackaged } = require('@lovely.sh/get-exec-env');
 
-if (isDev) {
-  console.log('Running on development');
+if (isNodeDev) {
+  console.log('Electron running on development');
+}
+
+if (isElectronDev) {
+  console.log('Electron running on development');
 }
 
 if (isElectronPackaged) {
